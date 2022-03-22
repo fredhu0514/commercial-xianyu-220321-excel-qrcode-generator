@@ -63,7 +63,7 @@ def xlsx2img(path, fill_color="black", back_color="white"):
         print("Your file exceed the limit.")
 ```
 
-### 4. Excel to Image
+### 4. Image to Excel
 
 ```python
 # 'path' is the path of the image file
