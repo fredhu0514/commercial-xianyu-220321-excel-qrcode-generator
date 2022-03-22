@@ -1,3 +1,17 @@
+## 0. Client Needs & Tech Realizations
+
+### 1. Requirements
+
+- The program can convert small sized excel documents into a QR code.
+- The program can convert the QR code back to the excel documents.
+- The program can compare two dataframes respectively gained from two QR codes and generate a new excel file showing the difference.
+
+### 2. Realization
+
+- Read the excel document into pandas data frame. Turn it into space separated string type data frame. Add the string data into the QR code buffer, and genearte one with medium error correction rate QR code with the third party module called qrcade.
+- For decoding QR code, the program employs the third party module named pyzbar to decode previously generated images, and the function will read the string data frame back to pandas data frame.
+- Lastly, call the `pandas.compare()` API in pandas to to compare the two dataframs and generate the difference data frame. Write the data frame of difference into a new excel file.
+
 ## I. Explanation of codes
 
 ### 1. Import Module
